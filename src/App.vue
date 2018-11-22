@@ -1,31 +1,40 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <h1>Pokédex</h1>
+      <router-link to="/">Home</router-link>|
+      <router-link to="/pikachu">Pikachu</router-link>
     </div>
+    <hr>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  font-family: 'Kodchasan', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
+
 #nav {
-  padding: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 
-#nav a {
+#nav > h1 {
+  flex-grow: 1;
+}
+
+html {
+  background: #161616;
+  color: white;
+}
+
+a {
+  color: skyblue;
+  text-decoration: none;
   font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  padding: 1em;
 }
 </style>
