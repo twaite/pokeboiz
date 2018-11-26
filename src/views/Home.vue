@@ -21,7 +21,7 @@ export default {
     }
   },
   async created() {
-    const response = await fetch('http://pokeapi.co/api/v2/pokemon/');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
     const body = await response.json();
     this.pokemonList = body.results.slice(0, 151);
   },
