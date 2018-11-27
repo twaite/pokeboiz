@@ -21,12 +21,18 @@ export default {
     }
   },
   async created() {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
-    const body = await response.json();
-    this.pokemonList = body.results.slice(0, 151);
+    try {
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+      const body = await response.json();
+      this.pokemonList = body.results.slice(0, 151);
+    } catch (e) {
+      console.error(e);
+    }
   },
   methods: {
     clickedCard(name) {
+      // this.$router.push('/' + name);
+      // this.$router.push(`/${name}`);
       this.$router.push({ name: 'pokemon', params: { name }});
     }
   }
@@ -42,7 +48,7 @@ export default {
 
   .card {
     width: 200px;
-    border: 1px solid lightgrey;
+    border: 2px solid lightgrey;
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem;

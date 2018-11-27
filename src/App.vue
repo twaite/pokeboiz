@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <header id="nav">
       <h1>Pokédex</h1>
       <router-link to="/">Home</router-link>|
       <router-link to="/pikachu">Pikachu</router-link>
-    </div>
+    </header>
     <hr>
     <router-view/>
   </div>
@@ -36,5 +36,9 @@ a {
   text-decoration: none;
   font-weight: bold;
   padding: 1em;
+}
+
+hr {
+  border: 1px solid white;
 }
 </style>
